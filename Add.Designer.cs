@@ -77,7 +77,7 @@
             resources.ApplyResources(this.bExit, "bExit");
             this.bExit.Name = "bExit";
             this.bExit.UseVisualStyleBackColor = false;
-            this.bExit.Click += new System.EventHandler(this.bExit_Click);
+            this.bExit.Click += new System.EventHandler(this.BExit_Click);
             // 
             // tabPage3
             // 
@@ -107,7 +107,7 @@
             // 
             resources.ApplyResources(this.tbNumber, "tbNumber");
             this.tbNumber.Name = "tbNumber";
-            this.tbNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNum_KeyPress);
+            this.tbNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbNum_KeyPress);
             // 
             // label14
             // 
@@ -132,7 +132,7 @@
             resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.TabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -178,7 +178,7 @@
             // 
             resources.ApplyResources(this.tbNum, "tbNum");
             this.tbNum.Name = "tbNum";
-            this.tbNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNum_KeyPress);
+            this.tbNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbNum_KeyPress);
             // 
             // label4
             // 
@@ -189,7 +189,7 @@
             // 
             resources.ApplyResources(this.tbOtch, "tbOtch");
             this.tbOtch.Name = "tbOtch";
-            this.tbOtch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFam_KeyPress);
+            this.tbOtch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbFam_KeyPress);
             // 
             // label3
             // 
@@ -200,13 +200,13 @@
             // 
             resources.ApplyResources(this.tbName, "tbName");
             this.tbName.Name = "tbName";
-            this.tbName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFam_KeyPress);
+            this.tbName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbFam_KeyPress);
             // 
             // tbFam
             // 
             resources.ApplyResources(this.tbFam, "tbFam");
             this.tbFam.Name = "tbFam";
-            this.tbFam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFam_KeyPress);
+            this.tbFam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbFam_KeyPress);
             // 
             // label2
             // 
@@ -305,7 +305,7 @@
             // 
             resources.ApplyResources(this.tbNums, "tbNums");
             this.tbNums.Name = "tbNums";
-            this.tbNums.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNum_KeyPress);
+            this.tbNums.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbNum_KeyPress);
             // 
             // label9
             // 
@@ -318,20 +318,19 @@
             resources.ApplyResources(this.bAdd, "bAdd");
             this.bAdd.Name = "bAdd";
             this.bAdd.UseVisualStyleBackColor = false;
-            this.bAdd.Click += new System.EventHandler(this.bAdd_Click);
+            this.bAdd.Click += new System.EventHandler(this.BAdd_Click);
             // 
             // bClear
             // 
             resources.ApplyResources(this.bClear, "bClear");
             this.bClear.Name = "bClear";
             this.bClear.UseVisualStyleBackColor = true;
-            this.bClear.Click += new System.EventHandler(this.bClear_Click);
+            this.bClear.Click += new System.EventHandler(this.BClear_Click);
             // 
             // label13
             // 
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.ForeColor = System.Drawing.Color.Transparent;
-            this.label13.Image = global::HospitalM.Properties.Resources.Screenshot_11;
             resources.ApplyResources(this.label13, "label13");
             this.label13.Name = "label13";
             // 

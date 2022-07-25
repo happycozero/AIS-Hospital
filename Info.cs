@@ -32,7 +32,7 @@ namespace HospitalM
             }
         }
 
-        private void bExit_Click(object sender, EventArgs e)
+        private void BExit_Click(object sender, EventArgs e)
         {
             Main main = new Main();
             main.Show();
@@ -40,7 +40,7 @@ namespace HospitalM
         }
 
         // таблица "врачи"
-        private void rbMedic_CheckedChanged(object sender, EventArgs e)
+        private void RbMedic_CheckedChanged(object sender, EventArgs e)
         {
             try
             {
@@ -52,9 +52,10 @@ namespace HospitalM
 
                 oleDbConn1.Open();
 
-                OleDbCommand sql1 = new OleDbCommand("SELECT * FROM medic;");
-
-                sql1.Connection = oleDbConn1;
+                OleDbCommand sql1 = new OleDbCommand("SELECT * FROM medic;")
+                {
+                    Connection = oleDbConn1
+                };
 
                 sql1.ExecuteNonQuery();
 
@@ -92,7 +93,7 @@ namespace HospitalM
         }
 
         // таблица "пациенты"
-        private void rbPatient_CheckedChanged(object sender, EventArgs e)
+        private void RbPatient_CheckedChanged(object sender, EventArgs e)
         {
             try
             {
@@ -104,9 +105,10 @@ namespace HospitalM
 
                 oleDbConn1.Open();
 
-                OleDbCommand sql1 = new OleDbCommand("SELECT * FROM patient;");
-
-                sql1.Connection = oleDbConn1;
+                OleDbCommand sql1 = new OleDbCommand("SELECT * FROM patient;")
+                {
+                    Connection = oleDbConn1
+                };
 
                 sql1.ExecuteNonQuery();
 
@@ -130,7 +132,7 @@ namespace HospitalM
                 dataGridViewInfo.Columns[3].Width = 150;
                 dataGridViewInfo.Columns[4].Width = 150;
                 dataGridViewInfo.Columns[5].Width = 140;
-                dataGridViewInfo.Columns[6].Width = 260;
+                dataGridViewInfo.Columns[6].Width = 205;
 
                 oleDbConn1.Close();
 
@@ -146,7 +148,7 @@ namespace HospitalM
         }
 
         // таблица "талончики"
-        private void rbVoucher_CheckedChanged(object sender, EventArgs e)
+        private void RbVoucher_CheckedChanged(object sender, EventArgs e)
         {
             try
             {
@@ -158,9 +160,10 @@ namespace HospitalM
 
                 oleDbConn1.Open();
 
-                OleDbCommand sql1 = new OleDbCommand("SELECT * FROM voucher;");
-
-                sql1.Connection = oleDbConn1;
+                OleDbCommand sql1 = new OleDbCommand("SELECT * FROM voucher;")
+                {
+                    Connection = oleDbConn1
+                };
 
                 sql1.ExecuteNonQuery();
 
@@ -191,16 +194,6 @@ namespace HospitalM
             {
                 MessageBox.Show("Возникла ошибка! " + msg.Message, "Информация");
             }
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridViewInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

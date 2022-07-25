@@ -95,7 +95,7 @@
             this.bExit.TabIndex = 7;
             this.bExit.Text = "Назад";
             this.bExit.UseVisualStyleBackColor = false;
-            this.bExit.Click += new System.EventHandler(this.bExit_Click);
+            this.bExit.Click += new System.EventHandler(this.BExit_Click);
             // 
             // tabPage3
             // 
@@ -128,7 +128,7 @@
             this.button7.TabIndex = 49;
             this.button7.Text = "Очисить поля";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.Click += new System.EventHandler(this.Button7_Click);
             // 
             // button3
             // 
@@ -141,7 +141,7 @@
             this.button3.TabIndex = 48;
             this.button3.Text = "Редактировать";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // button4
             // 
@@ -154,7 +154,7 @@
             this.button4.TabIndex = 47;
             this.button4.Text = "Удалить";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // comboChoiseVoucher
             // 
@@ -164,7 +164,7 @@
             this.comboChoiseVoucher.Name = "comboChoiseVoucher";
             this.comboChoiseVoucher.Size = new System.Drawing.Size(234, 32);
             this.comboChoiseVoucher.TabIndex = 46;
-            this.comboChoiseVoucher.SelectedIndexChanged += new System.EventHandler(this.comboChoiseVoucher_SelectedIndexChanged);
+            this.comboChoiseVoucher.SelectedIndexChanged += new System.EventHandler(this.ComboChoiseVoucher_SelectedIndexChanged);
             // 
             // label19
             // 
@@ -206,7 +206,7 @@
             this.tbNumber.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.tbNumber.Size = new System.Drawing.Size(234, 29);
             this.tbNumber.TabIndex = 38;
-            this.tbNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNum_KeyPress);
+            this.tbNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbNum_KeyPress);
             // 
             // label14
             // 
@@ -293,7 +293,7 @@
             // textPatronymicPatient
             // 
             this.textPatronymicPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.textPatronymicPatient.Location = new System.Drawing.Point(607, 52);
+            this.textPatronymicPatient.Location = new System.Drawing.Point(607, 49);
             this.textPatronymicPatient.Name = "textPatronymicPatient";
             this.textPatronymicPatient.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.textPatronymicPatient.Size = new System.Drawing.Size(234, 29);
@@ -320,7 +320,7 @@
             this.button6.TabIndex = 37;
             this.button6.Text = "Очисить поля";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.Button6_Click);
             // 
             // button1
             // 
@@ -333,7 +333,7 @@
             this.button1.TabIndex = 36;
             this.button1.Text = "Редактировать";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
@@ -346,7 +346,7 @@
             this.button2.TabIndex = 35;
             this.button2.Text = "Удалить";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // comboChoisePatient
             // 
@@ -356,7 +356,7 @@
             this.comboChoisePatient.Name = "comboChoisePatient";
             this.comboChoisePatient.Size = new System.Drawing.Size(234, 32);
             this.comboChoisePatient.TabIndex = 34;
-            this.comboChoisePatient.SelectedIndexChanged += new System.EventHandler(this.cmSub_SelectedIndexChanged);
+            this.comboChoisePatient.SelectedIndexChanged += new System.EventHandler(this.CmSub_SelectedIndexChanged);
             // 
             // label18
             // 
@@ -407,7 +407,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(602, 216);
+            this.label7.Location = new System.Drawing.Point(602, 219);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(160, 25);
             this.label7.TabIndex = 31;
@@ -423,7 +423,7 @@
             this.tbNums.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.tbNums.Size = new System.Drawing.Size(234, 29);
             this.tbNums.TabIndex = 28;
-            this.tbNums.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNum_KeyPress);
+            this.tbNums.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbNum_KeyPress);
             // 
             // textSurnamePatient
             // 
@@ -433,7 +433,7 @@
             this.textSurnamePatient.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.textSurnamePatient.Size = new System.Drawing.Size(234, 29);
             this.textSurnamePatient.TabIndex = 24;
-            this.textSurnamePatient.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFam_KeyPress);
+            this.textSurnamePatient.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbFam_KeyPress);
             // 
             // textNamePatient
             // 
@@ -443,7 +443,7 @@
             this.textNamePatient.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.textNamePatient.Size = new System.Drawing.Size(234, 29);
             this.textNamePatient.TabIndex = 23;
-            this.textNamePatient.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCode_KeyPress);
+            this.textNamePatient.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbCode_KeyPress);
             // 
             // label9
             // 
@@ -472,7 +472,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label12.Location = new System.Drawing.Point(291, 216);
+            this.label12.Location = new System.Drawing.Point(291, 219);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(59, 25);
             this.label12.TabIndex = 21;
@@ -514,7 +514,7 @@
             this.button5.TabIndex = 25;
             this.button5.Text = "Очистить поля";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.bClear1_Click);
+            this.button5.Click += new System.EventHandler(this.BClear1_Click);
             // 
             // bEdit
             // 
@@ -527,7 +527,7 @@
             this.bEdit.TabIndex = 24;
             this.bEdit.Text = "Редактировать";
             this.bEdit.UseVisualStyleBackColor = false;
-            this.bEdit.Click += new System.EventHandler(this.bEdit_Click);
+            this.bEdit.Click += new System.EventHandler(this.BEdit_Click);
             // 
             // bDel
             // 
@@ -540,7 +540,7 @@
             this.bDel.TabIndex = 23;
             this.bDel.Text = "Удалить";
             this.bDel.UseVisualStyleBackColor = false;
-            this.bDel.Click += new System.EventHandler(this.bDel_Click);
+            this.bDel.Click += new System.EventHandler(this.BDel_Click);
             // 
             // comboChoiseMedic
             // 
@@ -550,7 +550,7 @@
             this.comboChoiseMedic.Name = "comboChoiseMedic";
             this.comboChoiseMedic.Size = new System.Drawing.Size(234, 32);
             this.comboChoiseMedic.TabIndex = 22;
-            this.comboChoiseMedic.SelectedIndexChanged += new System.EventHandler(this.comboChoiseMedic_SelectedIndexChanged);
+            this.comboChoiseMedic.SelectedIndexChanged += new System.EventHandler(this.ComboChoiseMedic_SelectedIndexChanged);
             // 
             // label17
             // 
@@ -605,7 +605,7 @@
             this.tbNum.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.tbNum.Size = new System.Drawing.Size(234, 29);
             this.tbNum.TabIndex = 16;
-            this.tbNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNum_KeyPress);
+            this.tbNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbNum_KeyPress);
             // 
             // tbOtch
             // 
@@ -615,7 +615,7 @@
             this.tbOtch.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.tbOtch.Size = new System.Drawing.Size(234, 29);
             this.tbOtch.TabIndex = 14;
-            this.tbOtch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFam_KeyPress);
+            this.tbOtch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbFam_KeyPress);
             // 
             // tbName
             // 
@@ -625,7 +625,7 @@
             this.tbName.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.tbName.Size = new System.Drawing.Size(234, 29);
             this.tbName.TabIndex = 12;
-            this.tbName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFam_KeyPress);
+            this.tbName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbFam_KeyPress);
             // 
             // tbFam
             // 
@@ -635,7 +635,7 @@
             this.tbFam.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.tbFam.Size = new System.Drawing.Size(234, 29);
             this.tbFam.TabIndex = 11;
-            this.tbFam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFam_KeyPress);
+            this.tbFam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbFam_KeyPress);
             // 
             // label4
             // 
@@ -699,7 +699,7 @@
             // 
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.ForeColor = System.Drawing.Color.Transparent;
-            this.label10.Image = global::HospitalM.Properties.Resources.Screenshot_11;
+            this.label10.Image = ((System.Drawing.Image)(resources.GetObject("label10.Image")));
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label10.Location = new System.Drawing.Point(801, -1);
             this.label10.Name = "label10";

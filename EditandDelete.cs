@@ -57,9 +57,10 @@ namespace HospitalM
 
                     oleDbConn.Open();
 
-                    OleDbCommand sql = new OleDbCommand("SELECT * FROM medic;");
-
-                    sql.Connection = oleDbConn;
+                    OleDbCommand sql = new OleDbCommand("SELECT * FROM medic;")
+                    {
+                        Connection = oleDbConn
+                    };
 
                     sql.ExecuteNonQuery();
 
@@ -81,7 +82,7 @@ namespace HospitalM
             }
         }
 
-        private void bExit_Click(object sender, EventArgs e)
+        private void BExit_Click(object sender, EventArgs e)
         {
             Main main = new Main();
             main.Show();
@@ -101,7 +102,7 @@ namespace HospitalM
             }
         }
 
-        private void tbNum_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbNum_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == 8 || e.KeyChar == ' ')
             {
@@ -114,7 +115,7 @@ namespace HospitalM
             }
         }
 
-        private void tbFam_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbFam_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar >= 'А' && e.KeyChar <= 'Я' || e.KeyChar >= 'а' && e.KeyChar <= 'я' || e.KeyChar == 8 || e.KeyChar == ' ')
             {
@@ -127,7 +128,7 @@ namespace HospitalM
             }
         }
 
-        private void tbCode_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbCode_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar >= 'А' && e.KeyChar <= 'Я' || e.KeyChar >= 'а' && e.KeyChar <= 'я' || e.KeyChar == 8 || e.KeyChar == ' ' || e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == '.')
             {
@@ -156,9 +157,10 @@ namespace HospitalM
 
                     oleDbConn.Open();
 
-                    OleDbCommand sql = new OleDbCommand("SELECT * FROM medic;");
-
-                    sql.Connection = oleDbConn;
+                    OleDbCommand sql = new OleDbCommand("SELECT * FROM medic;")
+                    {
+                        Connection = oleDbConn
+                    };
 
                     sql.ExecuteNonQuery();
 
@@ -193,9 +195,10 @@ namespace HospitalM
 
                     oleDbConn.Open();
 
-                    OleDbCommand sql = new OleDbCommand("SELECT * FROM patient;");
-
-                    sql.Connection = oleDbConn;
+                    OleDbCommand sql = new OleDbCommand("SELECT * FROM patient;")
+                    {
+                        Connection = oleDbConn
+                    };
 
                     sql.ExecuteNonQuery();
 
@@ -228,9 +231,10 @@ namespace HospitalM
 
                     oleDbConn.Open();
 
-                    OleDbCommand sql = new OleDbCommand("SELECT * FROM voucher;");
-
-                    sql.Connection = oleDbConn;
+                    OleDbCommand sql = new OleDbCommand("SELECT * FROM voucher;")
+                    {
+                        Connection = oleDbConn
+                    };
 
                     sql.ExecuteNonQuery();
 
@@ -251,7 +255,7 @@ namespace HospitalM
             }
         }
 
-        private void bEdit_Click(object sender, EventArgs e)
+        private void BEdit_Click(object sender, EventArgs e)
         {
             if (tbNum.Text == "" || tbFam.Text == "" || tbName.Text == "" || tbOtch.Text == "" || comboWorkMedic.Text == "")
             {
@@ -271,15 +275,16 @@ namespace HospitalM
 
                     oleDbConn.Open();
 
-                    OleDbCommand sql = new OleDbCommand("UPDATE medic SET surname = '" + tbFam.Text + "', name_medic = '" + tbName.Text + "', patronymic = '" + tbOtch.Text + "', work_medic = '" + comboWorkMedic.Text + "' WHERE number = " + tbNum.Text);
-
-                    sql.Connection = oleDbConn;
+                    OleDbCommand sql = new OleDbCommand("UPDATE medic SET surname = '" + tbFam.Text + "', name_medic = '" + tbName.Text + "', patronymic = '" + tbOtch.Text + "', work_medic = '" + comboWorkMedic.Text + "' WHERE number = " + tbNum.Text)
+                    {
+                        Connection = oleDbConn
+                    };
 
                     sql.ExecuteNonQuery();
 
                     oleDbConn.Close();
 
-                    bClear1_Click(sender, e);
+                    BClear1_Click(sender, e);
 
                     MessageBox.Show("Информация отредактирована в БД! ", "Информация");
 
@@ -292,7 +297,7 @@ namespace HospitalM
             }
         }
 
-        private void comboChoiseMedic_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboChoiseMedic_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
@@ -304,9 +309,10 @@ namespace HospitalM
 
                 oleDbConn.Open();
 
-                OleDbCommand sql = new OleDbCommand("SELECT * FROM medic WHERE surname = '" + temp[0] + "';");
-
-                sql.Connection = oleDbConn;
+                OleDbCommand sql = new OleDbCommand("SELECT * FROM medic WHERE surname = '" + temp[0] + "';")
+                {
+                    Connection = oleDbConn
+                };
 
                 sql.ExecuteNonQuery();
 
@@ -328,7 +334,7 @@ namespace HospitalM
             }
         }
 
-        private void cmSub_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmSub_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
@@ -339,9 +345,10 @@ namespace HospitalM
 
                 oleDbConn.Open();
 
-                OleDbCommand sql = new OleDbCommand("SELECT * FROM patient WHERE surname_patient = '" + comboChoisePatient.Text + "';");
-
-                sql.Connection = oleDbConn;
+                OleDbCommand sql = new OleDbCommand("SELECT * FROM patient WHERE surname_patient = '" + comboChoisePatient.Text + "';")
+                {
+                    Connection = oleDbConn
+                };
 
                 sql.ExecuteNonQuery();
 
@@ -364,7 +371,7 @@ namespace HospitalM
             }
         }
 
-        private void comboChoiseVoucher_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboChoiseVoucher_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
@@ -376,9 +383,10 @@ namespace HospitalM
 
                 oleDbConn.Open();
 
-                OleDbCommand sql = new OleDbCommand("SELECT * FROM voucher WHERE number = " + temp[2] + ";");
-
-                sql.Connection = oleDbConn;
+                OleDbCommand sql = new OleDbCommand("SELECT * FROM voucher WHERE number = " + temp[2] + ";")
+                {
+                    Connection = oleDbConn
+                };
 
                 sql.ExecuteNonQuery();
 
@@ -398,7 +406,7 @@ namespace HospitalM
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             if (tbNumber.Text == "")
             {
@@ -428,9 +436,10 @@ namespace HospitalM
 
                         oleDbConn.Open();
 
-                        OleDbCommand sql = new OleDbCommand("UPDATE voucher SET date_voucher = #" + Date.Text + "#, time_voucher = '" + Time.Text + "' WHERE number = " + tbNumber.Text);
-
-                        sql.Connection = oleDbConn;
+                        OleDbCommand sql = new OleDbCommand("UPDATE voucher SET date_voucher = #" + Date.Text + "#, time_voucher = '" + Time.Text + "' WHERE number = " + tbNumber.Text)
+                        {
+                            Connection = oleDbConn
+                        };
 
                         sql.ExecuteNonQuery();
 
@@ -440,7 +449,7 @@ namespace HospitalM
 
                         MessageBox.Show("Успешно! Информация отредактирована в БД! ", "Информация");
 
-                        button7_Click(sender, e);
+                        Button7_Click(sender, e);
                     }
                 }
 
@@ -452,7 +461,7 @@ namespace HospitalM
         }
 
         // очиска полей на форме "врачи"
-        private void bClear1_Click(object sender, EventArgs e)
+        private void BClear1_Click(object sender, EventArgs e)
         {
             comboChoiseMedic.Text = "";
             tbNum.Text = "";
@@ -463,7 +472,7 @@ namespace HospitalM
         }
 
         // очиска полей на форме "пациенты"
-        private void button6_Click(object sender, EventArgs e)
+        private void Button6_Click(object sender, EventArgs e)
         {
             comboChoisePatient.Text = "";
             tbNums.Text = "";
@@ -474,7 +483,7 @@ namespace HospitalM
         }
 
         // очиска полей на форме "талончики"
-        private void button7_Click(object sender, EventArgs e)
+        private void Button7_Click(object sender, EventArgs e)
         {
             comboChoiseVoucher.Text = "";
             tbNumber.Text = "";
@@ -489,7 +498,7 @@ namespace HospitalM
         }
 
         // кнопка удаления информации о врачах в БД
-        private void bDel_Click(object sender, EventArgs e)
+        private void BDel_Click(object sender, EventArgs e)
         {
             try
             {
@@ -514,15 +523,16 @@ namespace HospitalM
 
                         oleDbConn.Open();
 
-                        OleDbCommand sql = new OleDbCommand("DELETE * FROM medic WHERE surname = '" + temp[0] + "';");
-
-                        sql.Connection = oleDbConn;
+                        OleDbCommand sql = new OleDbCommand("DELETE * FROM medic WHERE surname = '" + temp[0] + "';")
+                        {
+                            Connection = oleDbConn
+                        };
 
                         sql.ExecuteNonQuery();
 
                         oleDbConn.Close();
 
-                        bClear1_Click(sender, e);
+                        BClear1_Click(sender, e);
                         comboChoiseMedic.Items.Remove(comboChoiseMedic.SelectedItem.ToString());
 
                         MessageBox.Show("Запись была успешна удалена!", "Информация");
@@ -538,7 +548,7 @@ namespace HospitalM
         }
 
         // кнопка удаления информации о пациентах в БД
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
 
             try
@@ -561,15 +571,16 @@ namespace HospitalM
 
                         oleDbConn.Open();
 
-                        OleDbCommand sql = new OleDbCommand("DELETE * FROM patient WHERE surname_patient = '" + comboChoisePatient.Text + "';");
-
-                        sql.Connection = oleDbConn;
+                        OleDbCommand sql = new OleDbCommand("DELETE * FROM patient WHERE surname_patient = '" + comboChoisePatient.Text + "';")
+                        {
+                            Connection = oleDbConn
+                        };
 
                         sql.ExecuteNonQuery();
 
                         oleDbConn.Close();
 
-                        button6_Click(sender, e);
+                        Button6_Click(sender, e);
 
                         comboChoisePatient.Items.Remove(comboChoisePatient.SelectedItem.ToString());
 
@@ -585,7 +596,7 @@ namespace HospitalM
         }
 
         // кнопка удаления информации о талончиках в БД
-        private void button4_Click(object sender, EventArgs e)
+        private void Button4_Click(object sender, EventArgs e)
         {
             try
             {
@@ -608,15 +619,16 @@ namespace HospitalM
 
                         oleDbConn.Open();
 
-                        OleDbCommand sql = new OleDbCommand("DELETE * FROM voucher WHERE  number = " + temp[2] + ";");
-
-                        sql.Connection = oleDbConn;
+                        OleDbCommand sql = new OleDbCommand("DELETE * FROM voucher WHERE  number = " + temp[2] + ";")
+                        {
+                            Connection = oleDbConn
+                        };
 
                         sql.ExecuteNonQuery();
 
                         oleDbConn.Close();
 
-                        button7_Click(sender, e);
+                        Button7_Click(sender, e);
                         comboChoiseVoucher.Items.Remove(comboChoiseVoucher.SelectedItem.ToString());
 
                         MessageBox.Show("Запись была успешна удалена!", "Информация");
@@ -631,7 +643,7 @@ namespace HospitalM
         }
 
         // кнопка редактирования информации в БД
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
 
             if (tbNums.Text == "" || textSurnamePatient.Text == "" || textNamePatient.Text == "" || textPatronymicPatient.Text == "" || comboWorkPatient.Text == "")
@@ -651,9 +663,10 @@ namespace HospitalM
 
                     oleDbConn.Open();
 
-                    OleDbCommand sql = new OleDbCommand("UPDATE patient SET surname_patient = '" + textSurnamePatient.Text + "', name_patient = '" + textNamePatient.Text + "', patronymic_patient = '" + textPatronymicPatient.Text + "', date_patient = #" + DatePatient.Text + "#, work_patient = '" + comboWorkPatient.Text + "' WHERE number = " + tbNums.Text);
-
-                    sql.Connection = oleDbConn;
+                    OleDbCommand sql = new OleDbCommand("UPDATE patient SET surname_patient = '" + textSurnamePatient.Text + "', name_patient = '" + textNamePatient.Text + "', patronymic_patient = '" + textPatronymicPatient.Text + "', date_patient = #" + DatePatient.Text + "#, work_patient = '" + comboWorkPatient.Text + "' WHERE number = " + tbNums.Text)
+                    {
+                        Connection = oleDbConn
+                    };
 
                     sql.ExecuteNonQuery();
 
@@ -663,7 +676,7 @@ namespace HospitalM
 
                     MessageBox.Show("Информация отредактирована в БД! ", "Информация о редактировании");
 
-                    button6_Click(sender, e);
+                    Button6_Click(sender, e);
                 }
 
                 catch (Exception msg)

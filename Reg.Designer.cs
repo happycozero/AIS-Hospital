@@ -59,7 +59,7 @@
             this.bExit.TabIndex = 4;
             this.bExit.Text = "Назад";
             this.bExit.UseVisualStyleBackColor = false;
-            this.bExit.Click += new System.EventHandler(this.bExit_Click);
+            this.bExit.Click += new System.EventHandler(this.BExit_Click);
             // 
             // lLog
             // 
@@ -111,7 +111,7 @@
             this.tbLog.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.tbLog.Size = new System.Drawing.Size(263, 29);
             this.tbLog.TabIndex = 11;
-            this.tbLog.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbLog_KeyPress);
+            this.tbLog.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbLog_KeyPress);
             // 
             // bNewPass
             // 
@@ -123,7 +123,7 @@
             this.bNewPass.TabIndex = 12;
             this.bNewPass.Text = "Сгенерировать пароль";
             this.bNewPass.UseVisualStyleBackColor = false;
-            this.bNewPass.Click += new System.EventHandler(this.bNewPass_Click);
+            this.bNewPass.Click += new System.EventHandler(this.BNewPass_Click);
             // 
             // bAdd
             // 
@@ -135,7 +135,7 @@
             this.bAdd.TabIndex = 13;
             this.bAdd.Text = "Добавить";
             this.bAdd.UseVisualStyleBackColor = false;
-            this.bAdd.Click += new System.EventHandler(this.bAdd_Click);
+            this.bAdd.Click += new System.EventHandler(this.BAdd_Click);
             // 
             // tbFIO
             // 
@@ -147,9 +147,9 @@
             this.tbFIO.Size = new System.Drawing.Size(265, 29);
             this.tbFIO.TabIndex = 14;
             this.tbFIO.Text = "В формате \'Дикарев Р.О.\'";
-            this.tbFIO.Enter += new System.EventHandler(this.tbFIO_Enter);
-            this.tbFIO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFIO_KeyPress);
-            this.tbFIO.Leave += new System.EventHandler(this.tbFIO_Leave);
+            this.tbFIO.Enter += new System.EventHandler(this.TbFIO_Enter);
+            this.tbFIO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbFIO_KeyPress);
+            this.tbFIO.Leave += new System.EventHandler(this.TbFIO_Leave);
             // 
             // bClear
             // 
@@ -161,7 +161,7 @@
             this.bClear.TabIndex = 15;
             this.bClear.Text = "Очистить поля";
             this.bClear.UseVisualStyleBackColor = false;
-            this.bClear.Click += new System.EventHandler(this.bClear_Click);
+            this.bClear.Click += new System.EventHandler(this.BClear_Click);
             // 
             // lStatus
             // 
@@ -176,6 +176,7 @@
             // 
             // cmAdmin
             // 
+            this.cmAdmin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.cmAdmin.FormattingEnabled = true;
             this.cmAdmin.Items.AddRange(new object[] {
@@ -224,7 +225,7 @@
             // 
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.ForeColor = System.Drawing.Color.Transparent;
-            this.label12.Image = global::HospitalM.Properties.Resources.Screenshot_11;
+            this.label12.Image = global::HospitalM.Properties.Resources.label1;
             this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label12.Location = new System.Drawing.Point(794, -3);
             this.label12.Name = "label12";

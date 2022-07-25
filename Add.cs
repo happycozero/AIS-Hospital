@@ -63,7 +63,7 @@ namespace HospitalM
         }
 
         // возвращение на предыдущую форму
-        private void bExit_Click(object sender, EventArgs e)
+        private void BExit_Click(object sender, EventArgs e)
         {
             Main main = new Main();
             main.Show();
@@ -71,7 +71,7 @@ namespace HospitalM
         }
 
         // кнопка добавления информации в БД
-        private void bAdd_Click(object sender, EventArgs e)
+        private void BAdd_Click(object sender, EventArgs e)
         {
             if (TabPageNum == 1)
             {
@@ -90,15 +90,16 @@ namespace HospitalM
 
                         oleDbConn.Open();
 
-                        OleDbCommand sql = new OleDbCommand("INSERT INTO medic (`number`, `surname`, `name_medic`, `patronymic`, `work_medic`) VALUES (" + tbNum.Text + ",  '" + tbFam.Text + "', '" + tbName.Text + "', '" + tbOtch.Text + "', '" + cmPost.Text + "');");
-
-                        sql.Connection = oleDbConn;
+                        OleDbCommand sql = new OleDbCommand("INSERT INTO medic (`number`, `surname`, `name_medic`, `patronymic`, `work_medic`) VALUES (" + tbNum.Text + ",  '" + tbFam.Text + "', '" + tbName.Text + "', '" + tbOtch.Text + "', '" + cmPost.Text + "');")
+                        {
+                            Connection = oleDbConn
+                        };
 
                         sql.ExecuteNonQuery();
 
                         oleDbConn.Close();
 
-                        bClear_Click(sender, e);
+                        BClear_Click(sender, e);
 
                         MessageBox.Show("Информация добавлена в БД!", "Информация об ошибке");
 
@@ -131,9 +132,10 @@ namespace HospitalM
 
                         oleDbConn.Open();
 
-                        OleDbCommand sql = new OleDbCommand("INSERT INTO patient (`number`, `surname_patient`, `name_patient`, `patronymic_patient`, `date_patient`, `work_patient`) VALUES (" + tbNums.Text + ",  '" + textSurnamePatient.Text + "', '" + textNamePatient.Text + "', '" + textPatronymicPatient.Text + "', #" + DatePatient.Text + "#, '" + cmFormControl.Text + "');");
-
-                        sql.Connection = oleDbConn;
+                        OleDbCommand sql = new OleDbCommand("INSERT INTO patient (`number`, `surname_patient`, `name_patient`, `patronymic_patient`, `date_patient`, `work_patient`) VALUES (" + tbNums.Text + ",  '" + textSurnamePatient.Text + "', '" + textNamePatient.Text + "', '" + textPatronymicPatient.Text + "', #" + DatePatient.Text + "#, '" + cmFormControl.Text + "');")
+                        {
+                            Connection = oleDbConn
+                        };
 
                         sql.ExecuteNonQuery();
 
@@ -143,7 +145,7 @@ namespace HospitalM
 
                         MessageBox.Show("Успешно! Информация добавлена в БД! ", "Информация об ошибке");
 
-                        bClear_Click(sender, e);
+                        BClear_Click(sender, e);
 
 
 
@@ -188,9 +190,10 @@ namespace HospitalM
 
                             oleDbConn.Open();
 
-                            OleDbCommand sql = new OleDbCommand("INSERT INTO voucher (`number`, date_voucher, `time_voucher`) VALUES (" + tbNumber.Text + ", #" + DateVoucher.Text + "#, '" + Time.Text + "');");
-
-                            sql.Connection = oleDbConn;
+                            OleDbCommand sql = new OleDbCommand("INSERT INTO voucher (`number`, date_voucher, `time_voucher`) VALUES (" + tbNumber.Text + ", #" + DateVoucher.Text + "#, '" + Time.Text + "');")
+                            {
+                                Connection = oleDbConn
+                            };
 
                             sql.ExecuteNonQuery();
 
@@ -200,7 +203,7 @@ namespace HospitalM
 
                             MessageBox.Show("Информация добавлена в БД! ", "Информация об ошибке");
 
-                            bClear_Click(sender, e);
+                            BClear_Click(sender, e);
                         }
                     }
 
@@ -213,7 +216,7 @@ namespace HospitalM
         }
         
         // проверка на ввод в поле "введите номер" (врачи)
-        private void tbNum_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbNum_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ( e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == 8 || e.KeyChar == ' ')
             {
@@ -227,7 +230,7 @@ namespace HospitalM
         }
 
         // проверка на ввод в поле "введите фамилию" (врачи)
-        private void tbFam_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbFam_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar >= 'А' && e.KeyChar <= 'Я' || e.KeyChar >= 'а' && e.KeyChar <= 'я' || e.KeyChar == 8 || e.KeyChar == ' ')
             {
@@ -241,7 +244,7 @@ namespace HospitalM
         }
 
         // проверка на ввод в поле "введите имя" (врачи)
-        private void tbName_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar >= 'А' && e.KeyChar <= 'Я' || e.KeyChar >= 'а' && e.KeyChar <= 'я' || e.KeyChar == 8 || e.KeyChar == ' ')
             {
@@ -255,7 +258,7 @@ namespace HospitalM
         }
 
         // проверка на ввод в поле "введите отчество" (врачи)
-        private void tbOtch_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbOtch_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar >= 'А' && e.KeyChar <= 'Я' || e.KeyChar >= 'а' && e.KeyChar <= 'я' || e.KeyChar == 8 || e.KeyChar == ' ')
             {
@@ -269,7 +272,7 @@ namespace HospitalM
         }
 
         // проверка на ввод в поле "введите фамилию" (пациенты)
-        private void textSurnamePatient_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextSurnamePatient_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar >= 'А' && e.KeyChar <= 'Я' || e.KeyChar >= 'а' && e.KeyChar <= 'я' || e.KeyChar == 8 || e.KeyChar == ' ')
             {
@@ -283,7 +286,7 @@ namespace HospitalM
         }
 
         // проверка на ввод в поле "введите имя" (пациенты)
-        private void textNamePatient_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextNamePatient_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar >= 'А' && e.KeyChar <= 'Я' || e.KeyChar >= 'а' && e.KeyChar <= 'я' || e.KeyChar == 8 || e.KeyChar == ' ')
             {
@@ -297,7 +300,7 @@ namespace HospitalM
         }
 
         // проверка на ввод в поле "введите отчество" (пациенты)
-        private void textPatronymicPatient_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextPatronymicPatient_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar >= 'А' && e.KeyChar <= 'Я' || e.KeyChar >= 'а' && e.KeyChar <= 'я' || e.KeyChar == 8 || e.KeyChar == ' ')
             {
@@ -311,7 +314,7 @@ namespace HospitalM
         }
 
         // проверка на ввод в поле "введите номер" (талончики)
-        private void tbCode_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbCode_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar >= 'А' && e.KeyChar <= 'Я' || e.KeyChar >= 'а' && e.KeyChar <= 'я' || e.KeyChar == 8 || e.KeyChar == ' ' || e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == '.')
             {
@@ -325,7 +328,7 @@ namespace HospitalM
         }
 
         // выбор раздела в "tabcontrol"
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        private void TabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (tabControl1.SelectedTab == tabPage1)
             {
@@ -344,7 +347,7 @@ namespace HospitalM
         }
         
         // кнопка очищения полей
-        private void bClear_Click(object sender, EventArgs e)
+        private void BClear_Click(object sender, EventArgs e)
         {
             // очистка полей для формы пациенты
             if (TabPageNum == 1)

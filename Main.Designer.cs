@@ -47,7 +47,7 @@
             this.bExit.TabIndex = 4;
             this.bExit.Text = "Выход";
             this.bExit.UseVisualStyleBackColor = false;
-            this.bExit.Click += new System.EventHandler(this.bExit_Click);
+            this.bExit.Click += new System.EventHandler(this.BExit_Click);
             // 
             // bReg
             // 
@@ -59,7 +59,7 @@
             this.bReg.TabIndex = 5;
             this.bReg.Text = "Пользователи БД";
             this.bReg.UseVisualStyleBackColor = false;
-            this.bReg.Click += new System.EventHandler(this.bReg_Click);
+            this.bReg.Click += new System.EventHandler(this.BReg_Click);
             // 
             // bInfo
             // 
@@ -71,7 +71,7 @@
             this.bInfo.TabIndex = 6;
             this.bInfo.Text = "Просмотр информации в БД";
             this.bInfo.UseVisualStyleBackColor = false;
-            this.bInfo.Click += new System.EventHandler(this.bInfo_Click);
+            this.bInfo.Click += new System.EventHandler(this.BInfo_Click);
             // 
             // bAddInfo
             // 
@@ -83,7 +83,7 @@
             this.bAddInfo.TabIndex = 7;
             this.bAddInfo.Text = "Добавление информации в БД";
             this.bAddInfo.UseVisualStyleBackColor = false;
-            this.bAddInfo.Click += new System.EventHandler(this.bAddInfo_Click);
+            this.bAddInfo.Click += new System.EventHandler(this.BAddInfo_Click);
             // 
             // bEditInfo
             // 
@@ -95,18 +95,15 @@
             this.bEditInfo.TabIndex = 8;
             this.bEditInfo.Text = "Удаление и редактирование в БД";
             this.bEditInfo.UseVisualStyleBackColor = false;
-            this.bEditInfo.Click += new System.EventHandler(this.bEditInfo_Click);
+            this.bEditInfo.Click += new System.EventHandler(this.BEditInfo_Click);
             // 
             // label12
             // 
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.ForeColor = System.Drawing.Color.Transparent;
-            this.label12.Image = global::HospitalM.Properties.Resources.Screenshot_11;
-            this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label12.Location = new System.Drawing.Point(328, -3);
+            this.label12.Image = global::HospitalM.Properties.Resources.label1;
+            this.label12.Location = new System.Drawing.Point(313, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(121, 27);
-            this.label12.TabIndex = 10;
+            this.label12.Size = new System.Drawing.Size(100, 23);
+            this.label12.TabIndex = 0;
             // 
             // Main
             // 

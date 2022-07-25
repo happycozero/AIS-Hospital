@@ -71,7 +71,7 @@
             this.bEntrance.TabIndex = 2;
             this.bEntrance.Text = "Войти";
             this.bEntrance.UseVisualStyleBackColor = false;
-            this.bEntrance.Click += new System.EventHandler(this.bEntrance_Click);
+            this.bEntrance.Click += new System.EventHandler(this.BEntrance_Click);
             // 
             // bExit
             // 
@@ -83,10 +83,11 @@
             this.bExit.TabIndex = 3;
             this.bExit.Text = "Выход";
             this.bExit.UseVisualStyleBackColor = false;
-            this.bExit.Click += new System.EventHandler(this.bExit_Click);
+            this.bExit.Click += new System.EventHandler(this.BExit_Click);
             // 
             // Login
             // 
+            this.Login.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Login.FormattingEnabled = true;
             this.Login.Location = new System.Drawing.Point(43, 110);
@@ -109,7 +110,7 @@
             // 
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.ForeColor = System.Drawing.Color.Transparent;
-            this.label12.Image = global::HospitalM.Properties.Resources.Screenshot_11;
+            this.label12.Image = global::HospitalM.Properties.Resources.label2;
             this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label12.Location = new System.Drawing.Point(231, -1);
             this.label12.Name = "label12";

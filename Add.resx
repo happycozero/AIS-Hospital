@@ -150,6 +150,105 @@
   <data name="&gt;&gt;bExit.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="&gt;&gt;DateVoucher.Name" xml:space="preserve">
+    <value>DateVoucher</value>
+  </data>
+  <data name="&gt;&gt;DateVoucher.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DateVoucher.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;DateVoucher.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Time.Name" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="&gt;&gt;Time.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Time.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;Time.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tbNumber.Name" xml:space="preserve">
+    <value>tbNumber</value>
+  </data>
+  <data name="&gt;&gt;tbNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbNumber.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;tbNumber.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
+  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 33</value>
+  </data>
+  <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>617, 329</value>
+  </data>
+  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Талончики</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="DateVoucher.CustomFormat" xml:space="preserve">
     <value>dd-MM-yyyy</value>
   </data>
@@ -326,33 +425,6 @@
   </data>
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 33</value>
-  </data>
-  <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>617, 329</value>
-  </data>
-  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tabPage3.Text" xml:space="preserve">
-    <value>Талончики</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
-    <value>tabPage3</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="cmPost.Items" xml:space="preserve">
     <value>Аллерголог</value>
@@ -592,7 +664,7 @@
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="tbFam.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 146</value>
+    <value>11, 143</value>
   </data>
   <data name="tbFam.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Horizontal</value>
@@ -721,7 +793,7 @@
     <value>NoControl</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>319, 112</value>
+    <value>309, 114</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 25</value>
@@ -748,7 +820,7 @@
     <value>dd-MM-yyyy</value>
   </data>
   <data name="DatePatient.Location" type="System.Drawing.Point, System.Drawing">
-    <value>324, 142</value>
+    <value>314, 142</value>
   </data>
   <data name="DatePatient.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -775,7 +847,7 @@
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="textPatronymicPatient.Location" type="System.Drawing.Point, System.Drawing">
-    <value>324, 47</value>
+    <value>314, 47</value>
   </data>
   <data name="textPatronymicPatient.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Horizontal</value>
@@ -808,7 +880,7 @@
     <value>NoControl</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>319, 19</value>
+    <value>309, 19</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
     <value>202, 25</value>
@@ -835,13 +907,13 @@
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="textNamePatient.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 239</value>
+    <value>11, 239</value>
   </data>
   <data name="textNamePatient.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
   <data name="textNamePatient.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 29</value>
+    <value>233, 29</value>
   </data>
   <data name="textNamePatient.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -862,13 +934,13 @@
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="textSurnamePatient.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 142</value>
+    <value>11, 143</value>
   </data>
   <data name="textSurnamePatient.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
   <data name="textSurnamePatient.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 29</value>
+    <value>233, 29</value>
   </data>
   <data name="textSurnamePatient.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -895,7 +967,7 @@
     <value>NoControl</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 208</value>
+    <value>6, 211</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>151, 25</value>
@@ -928,7 +1000,7 @@
     <value>NoControl</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 114</value>
+    <value>6, 115</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>209, 25</value>
@@ -985,7 +1057,7 @@
     <value>ЭСК "Энергомост"</value>
   </data>
   <data name="cmFormControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>324, 236</value>
+    <value>314, 236</value>
   </data>
   <data name="cmFormControl.Size" type="System.Drawing.Size, System.Drawing">
     <value>234, 32</value>
@@ -1015,7 +1087,7 @@
     <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>319, 208</value>
+    <value>309, 208</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>262, 25</value>
@@ -1042,13 +1114,13 @@
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="tbNums.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 47</value>
+    <value>11, 47</value>
   </data>
   <data name="tbNums.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
   <data name="tbNums.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 29</value>
+    <value>233, 29</value>
   </data>
   <data name="tbNums.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -1211,6 +1283,14 @@
   </data>
   <data name="&gt;&gt;bClear.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="label13.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAALQAAAAXCAYAAACiRWVyAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wQAADsEBuJFr7QAAAFhJREFUeF7t0jERACAMADHUIICp/o0VH38Z4iDnvlmoEJoUoUkRmhShSRGaFKFJ
+        EZoUoUkRmhShSRGaFKFJEZoUoUkRmhShSRGaFKFJEZoUoUkRmhShCZn9xu42DLC45VYAAAAASUVORK5C
+        YII=
+</value>
   </data>
   <data name="label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -5516,6 +5596,9 @@
         /////8AA/////////////////8AAAAD/////////////////wAD/////////////////8AAAA///////
         ///////////AAP/////////////////4AAAH/////////////////8AA
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

@@ -30,7 +30,7 @@ namespace HospitalM
         }
 
         // кнопка выхода из программы
-        private void bExit_Click(object sender, EventArgs e)
+        private void BExit_Click(object sender, EventArgs e)
         {
             DialogResult results = MessageBox.Show("Вы действительно хотите выйти из программы?", "Выход", MessageBoxButtons.YesNo);
 
@@ -54,7 +54,7 @@ namespace HospitalM
         }
 
         // кнопка перехода на форму регистрации нового пользователя в БД
-        private void bReg_Click(object sender, EventArgs e)
+        private void BReg_Click(object sender, EventArgs e)
         {
             Reg reg = new Reg();
             reg.Show();
@@ -62,7 +62,7 @@ namespace HospitalM
         }
 
         // кнопка перехода на форму просмотра информации в БД
-        private void bInfo_Click(object sender, EventArgs e)
+        private void BInfo_Click(object sender, EventArgs e)
         {
             Info inf = new Info();
             inf.Show();
@@ -70,7 +70,7 @@ namespace HospitalM
         }
 
         // кнопка перехода на форму добавления информации в БД
-        private void bAddInfo_Click(object sender, EventArgs e)
+        private void BAddInfo_Click(object sender, EventArgs e)
         {
             Add add = new Add();
             add.Show();
@@ -78,7 +78,7 @@ namespace HospitalM
         }
 
         // кнопка перехода на форму редактирования и удаления информации в БД
-        private void bEditInfo_Click(object sender, EventArgs e)
+        private void BEditInfo_Click(object sender, EventArgs e)
         {
             EditandDelete edit = new EditandDelete();
             edit.Show();

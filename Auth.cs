@@ -31,9 +31,10 @@ namespace HospitalM
 
                 oleDbConn.Open();
 
-                OleDbCommand sql = new OleDbCommand("SELECT * FROM users;");
-
-                sql.Connection = oleDbConn;
+                OleDbCommand sql = new OleDbCommand("SELECT * FROM users;")
+                {
+                    Connection = oleDbConn
+                };
 
                 sql.ExecuteNonQuery();
 
@@ -53,7 +54,7 @@ namespace HospitalM
         }
 
         // выход из программы
-        private void bExit_Click(object sender, EventArgs e)
+        private void BExit_Click(object sender, EventArgs e)
         {
             DialogResult results = MessageBox.Show("Вы действительно хотите выйти из программы?", "Выход", MessageBoxButtons.YesNo);
 
@@ -63,7 +64,7 @@ namespace HospitalM
             }
         }
 
-        private void bEntrance_Click(object sender, EventArgs e)
+        private void BEntrance_Click(object sender, EventArgs e)
         {
             try
             {
@@ -86,9 +87,10 @@ namespace HospitalM
 
                     oleDbConn.Open();
 
-                    OleDbCommand sql = new OleDbCommand("SELECT * FROM users WHERE user_name = '" + login + "';");
-
-                    sql.Connection = oleDbConn;
+                    OleDbCommand sql = new OleDbCommand("SELECT * FROM users WHERE user_name = '" + login + "';")
+                    {
+                        Connection = oleDbConn
+                    };
 
                     sql.ExecuteNonQuery();
 

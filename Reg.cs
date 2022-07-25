@@ -35,9 +35,10 @@ namespace HospitalM
 
                 oleDbConn1.Open();
 
-                OleDbCommand sql1 = new OleDbCommand("SELECT * FROM users;");
-
-                sql1.Connection = oleDbConn1;
+                OleDbCommand sql1 = new OleDbCommand("SELECT * FROM users;")
+                {
+                    Connection = oleDbConn1
+                };
 
                 sql1.ExecuteNonQuery();
 
@@ -85,7 +86,7 @@ namespace HospitalM
             }
         }
 
-        private void bExit_Click(object sender, EventArgs e)
+        private void BExit_Click(object sender, EventArgs e)
         {
             Main main = new Main();
             main.Show();
@@ -93,7 +94,7 @@ namespace HospitalM
         }
 
         // кнопка добавления новго пользователя в БД
-        private void bAdd_Click(object sender, EventArgs e)
+        private void BAdd_Click(object sender, EventArgs e)
         {
             try
             {
@@ -126,15 +127,16 @@ namespace HospitalM
 
                         oleDbConn.Open();
 
-                        OleDbCommand sql = new OleDbCommand("INSERT INTO users (`user_name`, `login_name`, `password`, `admin`) VALUES ( '" + tbFIO.Text + "' " + ", '" + tbLog.Text + "', '" + tbPass.Text + "', '" + admin + "');");
-
-                        sql.Connection = oleDbConn;
+                        OleDbCommand sql = new OleDbCommand("INSERT INTO users (`user_name`, `login_name`, `password`, `admin`) VALUES ( '" + tbFIO.Text + "' " + ", '" + tbLog.Text + "', '" + tbPass.Text + "', '" + admin + "');")
+                        {
+                            Connection = oleDbConn
+                        };
 
                         sql.ExecuteNonQuery();
 
                         oleDbConn.Close();
 
-                        bClear_Click(sender, e);
+                        BClear_Click(sender, e);
                         UpdateGrid();
                     }
                 }
@@ -146,7 +148,7 @@ namespace HospitalM
             }
         }
 
-        private void bNewPass_Click(object sender, EventArgs e)
+        private void BNewPass_Click(object sender, EventArgs e)
         {
             int N = 20;
             Random random = new Random();
@@ -162,7 +164,7 @@ namespace HospitalM
             tbPass.Text = pass;
         }
 
-        private void tbFIO_Enter(object sender, EventArgs e)
+        private void TbFIO_Enter(object sender, EventArgs e)
         {
             if (tbFIO.Text == "В формате 'Дикарев Р.О.'")
             {
@@ -171,7 +173,7 @@ namespace HospitalM
             }
         }
 
-        private void tbFIO_Leave(object sender, EventArgs e)
+        private void TbFIO_Leave(object sender, EventArgs e)
         {
             if (tbFIO.Text == "")
             {
@@ -180,7 +182,7 @@ namespace HospitalM
             }
         }
 
-        private void bClear_Click(object sender, EventArgs e)
+        private void BClear_Click(object sender, EventArgs e)
         {
             tbFIO.Text = "В формате 'Дикарев Р.О.'";
             tbFIO.ForeColor = Color.Gray;
@@ -189,7 +191,7 @@ namespace HospitalM
             cmAdmin.Text = "";
         }
 
-        private void tbFIO_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbFIO_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar >= 'а' && e.KeyChar <= 'я' || e.KeyChar >= 'А' && e.KeyChar <= 'Я' ||  e.KeyChar == 8 || e.KeyChar == ' ' || e.KeyChar == '.') 
             {
@@ -202,7 +204,7 @@ namespace HospitalM
             }
         }
 
-        private void tbLog_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbLog_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar >= 'A' && e.KeyChar <= 'Z' || e.KeyChar >= 'a' && e.KeyChar <= 'z' || e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == 8 || e.KeyChar == ' ' || e.KeyChar == '.')
             {
@@ -227,9 +229,10 @@ namespace HospitalM
 
                 oleDbConn1.Open();
 
-                OleDbCommand sql1 = new OleDbCommand("SELECT * FROM users;");
-
-                sql1.Connection = oleDbConn1;
+                OleDbCommand sql1 = new OleDbCommand("SELECT * FROM users;")
+                {
+                    Connection = oleDbConn1
+                };
 
                 sql1.ExecuteNonQuery();
 
@@ -253,7 +256,7 @@ namespace HospitalM
 
                 oleDbConn1.Close();
 
-                //count = dataGridViewUsers.Rows.Count - 1;
+                count = dataGridViewUsers.Rows.Count - 1;
 
                 //lCount.Text = "Количество\nпользователей: " + count;
             }
