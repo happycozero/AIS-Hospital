@@ -2,6 +2,7 @@
 The project is developed as part of the curriculum and is not the final software.
 
 Automation of the Hospital's activities, i.e. reducing the time spent on customer service and booking coupons.
+
 The program allows you to perform the following tasks:
 - authorization with differentiation of access rights (administrator or user);
 - viewing of the Database (doctors, patients, tickets);
