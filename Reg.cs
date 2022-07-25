@@ -253,7 +253,7 @@ namespace HospitalM
 
                 oleDbConn1.Close();
 
-                count = dataGridViewUsers.Rows.Count - 1;
+                //count = dataGridViewUsers.Rows.Count - 1;
 
                 //lCount.Text = "Количество\nпользователей: " + count;
             }
