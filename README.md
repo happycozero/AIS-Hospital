@@ -1,7 +1,10 @@
 # AIS-Hospital
 The project is developed as part of the curriculum and is not the final software.
 
-Automation of the Hospital's activities, i.e. reducing the time spent on customer service and booking coupons.
+The program runs on FrameWork 4.5, the launch was carried out on Windows 10.
+There is support for Visual Studio 2013 and newer.
+
+Automation of hospital activities, i.e. reduction of time spent on customer service and booking vouchers.
 
 The program allows you to perform the following tasks:
 - authorization with differentiation of access rights (administrator or user);
@@ -14,3 +17,7 @@ Additionally, there is:
 - flexible error checking;
 - password generation;
 - selection of information from drop-down lists (for faster data filling).
+
+## :man_astronaut: Show your support
+
+Give a ⭐️ if this project helped you!
