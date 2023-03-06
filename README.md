@@ -1,7 +1,7 @@
 # AIS-Hospital
 The project is developed as part of the curriculum and is not the final software.
 
-The program runs on FrameWork 4.5, the launch was carried out on Windows 10.
+The program runs on FrameWork 4.5, the launch was carried out on Windows 10.<br>
 There is support for Visual Studio 2013 and newer.
 
 Automation of hospital activities, i.e. reduction of time spent on customer service and booking vouchers.
