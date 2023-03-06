@@ -72,7 +72,7 @@ namespace HospitalM
             this.Hide();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void Exit_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Вы уверены, что хотите выйти из программы?", "Выход из программы", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
@@ -83,6 +83,11 @@ namespace HospitalM
             {
 
             }
+        }
+
+        private void MinimizeToTray_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

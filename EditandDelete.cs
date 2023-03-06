@@ -54,39 +54,43 @@ namespace HospitalM
             Date.MaxDate = new DateTime(Year, Month + 1, Day);
             Date.MinDate = new DateTime(Year, Month, Day + 1);
 
-
             if (TabPageNum == 1)
             {
                 try
                 {
+                    // Очищаем элементы комбобокса перед заполнением
                     comboChoiseMedic.Items.Clear();
 
+                    // Строка подключения к базе данных
                     string conn = "Provider= Microsoft.Jet.OLEDB.4.0; Data Source=db.mdb;";
 
-                    OleDbConnection oleDbConn = new OleDbConnection(conn);
-
-                    oleDbConn.Open();
-
-                    OleDbCommand sql = new OleDbCommand("SELECT * FROM medic;")
+                    // Создаем объект подключения к базе данных
+                    using (OleDbConnection oleDbConn = new OleDbConnection(conn))
                     {
-                        Connection = oleDbConn
-                    };
+                        // Открываем подключение
+                        oleDbConn.Open();
 
-                    sql.ExecuteNonQuery();
+                        // Создаем SQL-команду для выборки данных из таблицы
+                        OleDbCommand sql = new OleDbCommand("SELECT * FROM medic;", oleDbConn);
 
-                    OleDbDataReader reader = sql.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        string N = reader[3].ToString();
-                        string O = reader[4].ToString();
-                        string medic = reader[2] + " " + N[0] + "." + O[0] + ".";
-                        comboChoiseMedic.Items.Add(medic);
+                        // Выполняем SQL-команду и записываем результаты в объект OleDbDataReader
+                        using (OleDbDataReader reader = sql.ExecuteReader())
+                        {
+                            // Читаем данные построчно и добавляем их в комбобокс
+                            while (reader.Read())
+                            {
+                                string N = reader.GetString(3);
+                                string O = reader.GetString(4);
+                                string medic = reader.GetString(2) + " " + N[0] + "." + O[0] + ".";
+                                comboChoiseMedic.Items.Add(medic);
+                            }
+                        }
                     }
                 }
 
                 catch (Exception msg)
                 {
+                    // Выводим сообщение об ошибке в случае исключения
                     MessageBox.Show("Возникла ошибка!\n" + msg.Message, "Ошибка программы", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -137,39 +141,35 @@ namespace HospitalM
             }
         }
 
-
-
         private void TabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (tabControl1.SelectedTab == tabPage1)
             {
                 TabPageNum = 1;
+                comboChoiseMedic.Items.Clear();
+                string conn = "Provider= Microsoft.Jet.OLEDB.4.0; Data Source=db.mdb;";
 
                 try
                 {
-                    comboChoiseMedic.Items.Clear();
-
-                    string conn = "Provider= Microsoft.Jet.OLEDB.4.0; Data Source=db.mdb;";
-                    OleDbConnection oleDbConn = new OleDbConnection(conn);
-                    oleDbConn.Open();
-
-                    OleDbCommand sql = oleDbConn.CreateCommand();
-                    sql.CommandText = "SELECT * FROM medic;";
-
-                    OleDbDataReader reader = sql.ExecuteReader();
-
-                    while (reader.Read())
+                    using (OleDbConnection oleDbConn = new OleDbConnection(conn))
                     {
-                        string N = reader.GetString(3);
-                        string O = reader.GetString(4);
-                        string medic = reader.GetString(2) + " " + N[0] + "." + O[0] + ".";
-                        comboChoiseMedic.Items.Add(medic);
+                        oleDbConn.Open();
+
+                        using (OleDbCommand sql = new OleDbCommand("SELECT * FROM medic;", oleDbConn))
+                        {
+                            using (OleDbDataReader reader = sql.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    string N = reader.GetString(3);
+                                    string O = reader.GetString(4);
+                                    string medic = reader.GetString(2) + " " + N[0] + "." + O[0] + ".";
+                                    comboChoiseMedic.Items.Add(medic);
+                                }
+                            }
+                        }
                     }
-
-                    reader.Close();
-                    oleDbConn.Close();
                 }
-
                 catch (Exception msg)
                 {
                     MessageBox.Show("Возникла ошибка!\n" + msg.Message, "Ошибка программы", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -185,29 +185,28 @@ namespace HospitalM
                     comboChoisePatient.Items.Clear();
 
                     string conn = "Provider= Microsoft.Jet.OLEDB.4.0; Data Source=db.mdb;";
-                    OleDbConnection oleDbConn = new OleDbConnection(conn);
-                    oleDbConn.Open();
-
-                    OleDbCommand sql = new OleDbCommand("SELECT * FROM patient;");
-                    sql.Connection = oleDbConn;
-
-                    OleDbDataReader reader = sql.ExecuteReader();
-                    while (reader.Read())
+                    using (OleDbConnection oleDbConn = new OleDbConnection(conn))
                     {
-                        string sub = reader[3].ToString();
-                        comboChoisePatient.Items.Add(sub);
+                        oleDbConn.Open();
+
+                        OleDbCommand sql = new OleDbCommand("SELECT * FROM patient;", oleDbConn);
+
+                        using (OleDbDataReader reader = sql.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string sub = reader.GetString(3);
+                                comboChoisePatient.Items.Add(sub);
+                            }
+                        }
                     }
-
-                    reader.Close();
-                    sql.Dispose();
-                    oleDbConn.Close();
                 }
-
                 catch (Exception msg)
                 {
                     MessageBox.Show("Возникла ошибка!\n" + msg.Message, "Ошибка программы", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
 
             if (tabControl1.SelectedTab == tabPage3)
             {
@@ -217,31 +216,29 @@ namespace HospitalM
                 {
                     comboChoiseVoucher.Items.Clear();
 
-                    string conn = "Provider= Microsoft.Jet.OLEDB.4.0; Data Source=db.mdb;";
+                    string conn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db.mdb;";
 
-                    OleDbConnection oleDbConn = new OleDbConnection(conn);
-
-                    oleDbConn.Open();
-
-                    OleDbCommand sql = new OleDbCommand("SELECT * FROM voucher;", oleDbConn);
-
-                    OleDbDataReader reader = sql.ExecuteReader();
-
-                    while (reader.Read())
+                    using (OleDbConnection oleDbConn = new OleDbConnection(conn))
                     {
-                        string pair = "Номер пациента: " + reader[1];
-                        comboChoiseVoucher.Items.Add(pair);
+                        oleDbConn.Open();
+
+                        using (OleDbCommand sql = new OleDbCommand("SELECT * FROM voucher;", oleDbConn))
+                        {
+                            using (OleDbDataReader reader = sql.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    string pair = "Номер пациента: " + reader[1];
+                                    comboChoiseVoucher.Items.Add(pair);
+                                }
+                            }
+                        }
                     }
-
-                    reader.Close();
-                    oleDbConn.Close();
                 }
-
                 catch (Exception msg)
                 {
                     MessageBox.Show("Возникла ошибка!\n" + msg.Message, "Ошибка программы", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
         }
 
@@ -328,29 +325,32 @@ namespace HospitalM
             try
             {
                 string conn = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=db.mdb;";
-                OleDbConnection oleDbConn = new OleDbConnection(conn);
-                oleDbConn.Open();
-
-                OleDbCommand sql = new OleDbCommand("SELECT * FROM patient WHERE surname_patient='" + comboChoisePatient.Text + "';");
-                sql.Connection = oleDbConn;
-
-                OleDbDataReader reader = sql.ExecuteReader();
-                while (reader.Read())
+                using (OleDbConnection oleDbConn = new OleDbConnection(conn))
                 {
-                    tbNums.Text = reader[1].ToString();
-                    textSurnamePatient.Text = reader[2].ToString();
-                    textNamePatient.Text = reader[3].ToString();
-                    textPatronymicPatient.Text = reader[4].ToString();
-                    DatePatient.Value = Convert.ToDateTime(reader[5].ToString());
-                    comboWorkPatient.Text = reader[6].ToString();
-                }
+                    oleDbConn.Open();
 
-                oleDbConn.Close();
+                    OleDbCommand sql = new OleDbCommand("SELECT * FROM patient WHERE surname_patient=@surname", oleDbConn);
+                    sql.Parameters.AddWithValue("@surname", comboChoisePatient.Text);
+
+                    using (OleDbDataReader reader = sql.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            tbNums.Text = reader.GetInt32(1).ToString();
+                            textSurnamePatient.Text = reader.GetString(2);
+                            textNamePatient.Text = reader.GetString(3);
+                            textPatronymicPatient.Text = reader.GetString(4);
+                            DatePatient.Value = reader.GetDateTime(5);
+                            comboWorkPatient.Text = reader.GetString(6);
+                        }
+                    }
+                }
             }
             catch (Exception msg)
             {
                 MessageBox.Show("Возникла ошибка!\n" + msg.Message, "Ошибка программы", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void ComboChoiseVoucher_SelectedIndexChanged(object sender, EventArgs e)
@@ -405,7 +405,7 @@ namespace HospitalM
 
                     if (Convert.ToInt32(temp1[2]) > 20 || Convert.ToInt32(temp1[2]) < 8)
                     {
-                        MessageBox.Show("Ошибка! Выберите интервал времени с 6:00 до 21:00", "Информация об ошибке");
+                        MessageBox.Show("Ошибка! Выберите интервал времени с 6:00 до 21:00", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
                     else
@@ -429,7 +429,7 @@ namespace HospitalM
 
                         Date.CustomFormat = "dd-MM-yyyy";
 
-                        MessageBox.Show("Успешно! Информация отредактирована в БД! ", "Информация");
+                        MessageBox.Show("Успешно! Информация отредактирована в БД.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         Button7_Click(sender, e);
                     }
@@ -486,7 +486,7 @@ namespace HospitalM
             {
                 if (string.IsNullOrEmpty(comboChoiseMedic.Text))
                 {
-                    MessageBox.Show("Сначала выберите запись!", "Информация об ошибке");
+                    MessageBox.Show("Сначала выберите запись!", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -510,7 +510,7 @@ namespace HospitalM
                     BClear1_Click(sender, e);
                     comboChoiseMedic.Items.Remove(comboChoiseMedic.SelectedItem.ToString());
 
-                    MessageBox.Show("Запись была успешна удалена!", "Информация");
+                    MessageBox.Show("Запись была успешна удалена!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
@@ -525,26 +525,33 @@ namespace HospitalM
         {
             try
             {
-                if (comboChoisePatient.Text == "")
+                if (string.IsNullOrEmpty(comboChoisePatient.Text))
                 {
                     MessageBox.Show("Сначала выберите запись!", "Информация об ошибке");
+                    return;
                 }
-                else
+
+                DialogResult results = MessageBox.Show("Вы действительно хотите удалить выбранную Вами запись?", "Удаление информации", MessageBoxButtons.YesNo);
+                if (results != DialogResult.Yes)
                 {
-                    DialogResult results = MessageBox.Show("Вы действительно хотите удалить выбранную Вами запись?", "Удаление информации", MessageBoxButtons.YesNo);
-                    if (results == DialogResult.Yes)
+                    return;
+                }
+
+                string connString = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=db.mdb;";
+                using (OleDbConnection connection = new OleDbConnection(connString))
+                using (OleDbCommand command = new OleDbCommand("DELETE FROM patient WHERE surname_patient = ?", connection))
+                {
+                    command.Parameters.AddWithValue("@surname_patient", comboChoisePatient.Text);
+                    connection.Open();
+                    using (OleDbDataReader reader = command.ExecuteReader())
                     {
-                        string con = "Provider= Microsoft.Jet.OLEDB.4.0; Data Source=db.mdb;";
-                        OleDbConnection oleDbConn = new OleDbConnection(con);
-                        oleDbConn.Open();
-                        OleDbCommand sql = new OleDbCommand("DELETE * FROM patient WHERE surname_patient = '" + comboChoisePatient.Text + "';", oleDbConn);
-                        sql.ExecuteNonQuery();
-                        oleDbConn.Close();
-                        Button6_Click(sender, e);
-                        comboChoisePatient.Items.Remove(comboChoisePatient.SelectedItem.ToString());
-                        MessageBox.Show("Запись была успешна удалена!", "Информация");
+                        // Закрываем DataReader, чтобы не было ошибок из-за открытых ресурсов
                     }
                 }
+
+                comboChoisePatient.Items.Remove(comboChoisePatient.SelectedItem.ToString());
+                Button6_Click(sender, e);
+                MessageBox.Show("Запись была успешна удалена!", "Информация");
             }
 
             catch (Exception msg)
@@ -643,7 +650,7 @@ namespace HospitalM
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void Exit_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Вы уверены, что хотите выйти из программы?", "Выход из программы", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
@@ -714,6 +721,11 @@ namespace HospitalM
             if (!Char.IsDigit(e.KeyChar)) return;
             else
                 e.Handled = true;
+        }
+
+        private void MinimizeToTray_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -64,13 +64,16 @@
             this.label9 = new System.Windows.Forms.Label();
             this.bAdd = new System.Windows.Forms.Button();
             this.bClear = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Exit = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.MimizeToTray = new System.Windows.Forms.PictureBox();
             this.tabPage3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MimizeToTray)).BeginInit();
             this.SuspendLayout();
             // 
             // bExit
@@ -329,32 +332,42 @@
             this.bClear.UseVisualStyleBackColor = true;
             this.bClear.Click += new System.EventHandler(this.BClear_Click);
             // 
-            // label13
+            // Exit
             // 
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.ForeColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
+            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Exit.Image = global::HospitalM.Properties.Resources.exit;
+            resources.ApplyResources(this.Exit, "Exit");
+            this.Exit.Name = "Exit";
+            this.Exit.TabStop = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
-            // pictureBox1
+            // pictureBox2
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.pictureBox1.Image = global::HospitalM.Properties.Resources.exit;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox2.Image = global::HospitalM.Properties.Resources.label1;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // MimizeToTray
+            // 
+            this.MimizeToTray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.MimizeToTray.Image = global::HospitalM.Properties.Resources.resize;
+            resources.ApplyResources(this.MimizeToTray, "MimizeToTray");
+            this.MimizeToTray.Name = "MimizeToTray";
+            this.MimizeToTray.TabStop = false;
+            this.MimizeToTray.Click += new System.EventHandler(this.MinimizeToTray_Click);
             // 
             // Add
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.MimizeToTray);
+            this.Controls.Add(this.Exit);
             this.Controls.Add(this.bClear);
             this.Controls.Add(this.bAdd);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.bExit);
+            this.Controls.Add(this.pictureBox2);
             this.Name = "Add";
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -363,7 +376,9 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MimizeToTray)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -405,7 +420,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Exit;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox MimizeToTray;
     }
 }

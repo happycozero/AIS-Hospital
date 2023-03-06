@@ -77,13 +77,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Exit = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.MinimizeToTray = new System.Windows.Forms.PictureBox();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizeToTray)).BeginInit();
             this.SuspendLayout();
             // 
             // bExit
@@ -705,39 +708,52 @@
             this.tabControl1.TabIndex = 6;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.TabControl1_SelectedIndexChanged);
             // 
-            // label10
+            // Exit
             // 
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.ForeColor = System.Drawing.Color.Transparent;
-            this.label10.Image = ((System.Drawing.Image)(resources.GetObject("label10.Image")));
-            this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(801, -1);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(121, 27);
-            this.label10.TabIndex = 10;
+            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Exit.Image = global::HospitalM.Properties.Resources.exit;
+            this.Exit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Exit.Location = new System.Drawing.Point(873, 1);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(24, 25);
+            this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Exit.TabIndex = 12;
+            this.Exit.TabStop = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
-            // pictureBox1
+            // pictureBox2
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.pictureBox1.Image = global::HospitalM.Properties.Resources.exit;
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(874, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox2.Image = global::HospitalM.Properties.Resources.label1;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(905, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
+            // MinimizeToTray
+            // 
+            this.MinimizeToTray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.MinimizeToTray.Image = global::HospitalM.Properties.Resources.resize;
+            this.MinimizeToTray.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.MinimizeToTray.Location = new System.Drawing.Point(843, 1);
+            this.MinimizeToTray.Name = "MinimizeToTray";
+            this.MinimizeToTray.Size = new System.Drawing.Size(24, 25);
+            this.MinimizeToTray.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MinimizeToTray.TabIndex = 16;
+            this.MinimizeToTray.TabStop = false;
+            this.MinimizeToTray.Click += new System.EventHandler(this.MinimizeToTray_Click);
             // 
             // EditandDelete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 564);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.MinimizeToTray);
+            this.Controls.Add(this.Exit);
             this.Controls.Add(this.bExit);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.pictureBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditandDelete";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -749,7 +765,9 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizeToTray)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -804,7 +822,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Exit;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox MinimizeToTray;
     }
 }

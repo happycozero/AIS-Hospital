@@ -45,10 +45,13 @@
             this.cmAdmin = new System.Windows.Forms.ComboBox();
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
             this.lCount = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Exit = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.MinimizeToTray = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizeToTray)).BeginInit();
             this.SuspendLayout();
             // 
             // bExit
@@ -92,9 +95,9 @@
             this.lFIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lFIO.Location = new System.Drawing.Point(293, 354);
             this.lFIO.Name = "lFIO";
-            this.lFIO.Size = new System.Drawing.Size(67, 25);
+            this.lFIO.Size = new System.Drawing.Size(153, 25);
             this.lFIO.TabIndex = 8;
-            this.lFIO.Text = "ФИО:";
+            this.lFIO.Text = "Фамилия И.О:";
             // 
             // tbPass
             // 
@@ -142,16 +145,13 @@
             // tbFIO
             // 
             this.tbFIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbFIO.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.tbFIO.ForeColor = System.Drawing.SystemColors.InfoText;
             this.tbFIO.Location = new System.Drawing.Point(298, 382);
             this.tbFIO.Name = "tbFIO";
             this.tbFIO.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.tbFIO.Size = new System.Drawing.Size(275, 29);
             this.tbFIO.TabIndex = 14;
-            this.tbFIO.Text = "В формате \'Дикарев Р.О.\'";
-            this.tbFIO.Enter += new System.EventHandler(this.TbFIO_Enter);
             this.tbFIO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbFIO_KeyPress);
-            this.tbFIO.Leave += new System.EventHandler(this.TbFIO_Leave);
             // 
             // bClear
             // 
@@ -224,37 +224,49 @@
             this.lCount.Size = new System.Drawing.Size(0, 29);
             this.lCount.TabIndex = 20;
             // 
-            // label12
+            // Exit
             // 
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.ForeColor = System.Drawing.Color.Transparent;
-            this.label12.Image = global::HospitalM.Properties.Resources.label1;
-            this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label12.Location = new System.Drawing.Point(794, -3);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(121, 27);
-            this.label12.TabIndex = 22;
+            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Exit.Image = global::HospitalM.Properties.Resources.exit;
+            this.Exit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Exit.Location = new System.Drawing.Point(846, -1);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(24, 25);
+            this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Exit.TabIndex = 23;
+            this.Exit.TabStop = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
-            // pictureBox1
+            // pictureBox2
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.pictureBox1.Image = global::HospitalM.Properties.Resources.exit;
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(846, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox2.Image = global::HospitalM.Properties.Resources.label1;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(882, 28);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 24;
+            this.pictureBox2.TabStop = false;
+            // 
+            // MinimizeToTray
+            // 
+            this.MinimizeToTray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.MinimizeToTray.Image = global::HospitalM.Properties.Resources.resize;
+            this.MinimizeToTray.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.MinimizeToTray.Location = new System.Drawing.Point(816, -1);
+            this.MinimizeToTray.Name = "MinimizeToTray";
+            this.MinimizeToTray.Size = new System.Drawing.Size(24, 25);
+            this.MinimizeToTray.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MinimizeToTray.TabIndex = 25;
+            this.MinimizeToTray.TabStop = false;
+            this.MinimizeToTray.Click += new System.EventHandler(this.MinimizeToTray_Click);
             // 
             // Reg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 666);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.MinimizeToTray);
+            this.Controls.Add(this.Exit);
             this.Controls.Add(this.lCount);
             this.Controls.Add(this.dataGridViewUsers);
             this.Controls.Add(this.cmAdmin);
@@ -269,12 +281,15 @@
             this.Controls.Add(this.lPass);
             this.Controls.Add(this.lLog);
             this.Controls.Add(this.bExit);
+            this.Controls.Add(this.pictureBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Reg";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Пользователи | АИС Больница";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizeToTray)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,7 +311,8 @@
         private System.Windows.Forms.ComboBox cmAdmin;
         private System.Windows.Forms.DataGridView dataGridViewUsers;
         private System.Windows.Forms.Label lCount;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Exit;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox MinimizeToTray;
     }
 }

@@ -74,8 +74,8 @@ namespace HospitalM
                 dataGridViewInfo.Columns[1].Width = 125;
                 dataGridViewInfo.Columns[2].Width = 135;
                 dataGridViewInfo.Columns[3].Width = 135;
-                dataGridViewInfo.Columns[4].Width = 200;
-                dataGridViewInfo.Columns[5].Width = 200;
+                dataGridViewInfo.Columns[4].Width = 220;
+                dataGridViewInfo.Columns[5].Width = 250;
 
                 oleDbConn1.Close();
 
@@ -176,7 +176,7 @@ namespace HospitalM
 
                 // ширина колонок таблицы "талончики"
                 dataGridViewInfo.DataSource = dt1;
-                dataGridViewInfo.ColumnHeadersHeight = 50;
+                dataGridViewInfo.ColumnHeadersHeight = 60;
                 dataGridViewInfo.Columns[0].Visible = false;
                 dataGridViewInfo.Columns[1].Width = 130;
                 dataGridViewInfo.Columns[2].Width = 370;
@@ -195,7 +195,7 @@ namespace HospitalM
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void Exit_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Вы уверены, что хотите выйти из программы?", "Выход из программы", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
@@ -206,6 +206,11 @@ namespace HospitalM
             {
 
             }
+        }
+
+        private void MinimizeToTray_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

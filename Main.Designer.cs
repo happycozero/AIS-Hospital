@@ -34,16 +34,19 @@
             this.bInfo = new System.Windows.Forms.Button();
             this.bAddInfo = new System.Windows.Forms.Button();
             this.bEditInfo = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Exit = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.MinimizeToTray = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizeToTray)).BeginInit();
             this.SuspendLayout();
             // 
             // bExit
             // 
             this.bExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bExit.Location = new System.Drawing.Point(12, 388);
+            this.bExit.Location = new System.Drawing.Point(13, 388);
             this.bExit.Name = "bExit";
             this.bExit.Size = new System.Drawing.Size(435, 52);
             this.bExit.TabIndex = 4;
@@ -99,44 +102,62 @@
             this.bEditInfo.UseVisualStyleBackColor = false;
             this.bEditInfo.Click += new System.EventHandler(this.BEditInfo_Click);
             // 
-            // label12
+            // Exit
             // 
-            this.label12.Image = global::HospitalM.Properties.Resources.label1;
-            this.label12.Location = new System.Drawing.Point(313, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(139, 23);
-            this.label12.TabIndex = 0;
+            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Exit.Image = global::HospitalM.Properties.Resources.exit;
+            this.Exit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Exit.Location = new System.Drawing.Point(433, 0);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(24, 25);
+            this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Exit.TabIndex = 12;
+            this.Exit.TabStop = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
-            // pictureBox1
+            // pictureBox2
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.pictureBox1.Image = global::HospitalM.Properties.Resources.exit;
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(433, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox2.Image = global::HospitalM.Properties.Resources.label1;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(464, 28);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
+            // MinimizeToTray
+            // 
+            this.MinimizeToTray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.MinimizeToTray.Image = global::HospitalM.Properties.Resources.resize;
+            this.MinimizeToTray.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.MinimizeToTray.Location = new System.Drawing.Point(403, 0);
+            this.MinimizeToTray.Name = "MinimizeToTray";
+            this.MinimizeToTray.Size = new System.Drawing.Size(24, 25);
+            this.MinimizeToTray.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MinimizeToTray.TabIndex = 16;
+            this.MinimizeToTray.TabStop = false;
+            this.MinimizeToTray.Click += new System.EventHandler(this.MinimizeToTray_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(459, 452);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.MinimizeToTray);
+            this.Controls.Add(this.Exit);
             this.Controls.Add(this.bEditInfo);
             this.Controls.Add(this.bAddInfo);
             this.Controls.Add(this.bInfo);
             this.Controls.Add(this.bReg);
             this.Controls.Add(this.bExit);
+            this.Controls.Add(this.pictureBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Меню | АИС Больница";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizeToTray)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -148,7 +169,8 @@
         private System.Windows.Forms.Button bInfo;
         private System.Windows.Forms.Button bAddInfo;
         private System.Windows.Forms.Button bEditInfo;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Exit;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox MinimizeToTray;
     }
 }
