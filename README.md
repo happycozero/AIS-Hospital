@@ -1,23 +1,23 @@
-# AIS-Hospital
-The project is developed as part of the curriculum and is not the final software.
+# АИС - Больница
+Проект разработан как часть учебной программы и не является окончательным программным обеспечением.
 
-The program runs on FrameWork 4.5, the launch was carried out on Windows 10.<br>
-There is support for Visual Studio 2013 and newer.
+Программа работает на платформе FrameWork 4.5, запуск был осуществлен на Windows 10.<br>
+Поддержка осуществлялась Visual Studio 2013 и новее.
 
-Automation of hospital activities, i.e. reduction of time spent on customer service and booking vouchers.
+Автоматизация деятельности больницы, т.е. сокращение времени затрачиваемого на обслуживание клиентов и бронирования талонов.
 
-The program allows you to perform the following tasks:
-- authorization with differentiation of access rights (administrator or user);
-- viewing of the Database (doctors, patients, tickets);
-- adding new information to the database (doctors, patients, coupons);
-- deleting and editing information in the Database (Doctors, Patients, Appointments);
-- creating a new user with different access rights (administrator or user).
+Программа позволяет выполнять следующие задачи:
+- авторизация с разграничением прав доступа (администратор или пользователь);
+- просмотр базы данных (врачи, пациенты, билеты);
+- добавление новой информации в базу данных (врачи, пациенты, купоны);
+- удаление и редактирование информации в базе данных (врачи, пациенты, назначения);
+- создание нового пользователя с другими правами доступа (администратор или пользователь).
 
-Additionally, there is:
-- flexible error checking;
-- password generation;
-- selection of information from drop-down lists (for faster data filling).
+Кроме того, существует:
+- гибкая проверка ошибок;
+- генерация пароля;
+- выбор информации из выпадающих списков (для более быстрого заполнения данных).
 
-## :man_astronaut: Show your support
+## :man_astronaut: Окажите свою поддержку
 
-Give a ⭐️ if this project helped you!
+Поставьте ⭐️ проекту, этим Вы поможете ему!
